@@ -2,122 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
-/* BONNY AI Builder Design System - Neural Network Inspired */
-
+/* BONNY Custom Styles */
 @layer base {
   :root {
-    /* Neural Core Colors */
-    --background: 215 28% 4%;
-    --foreground: 213 31% 91%;
+    --bonny-primary: 102 126 234;
+    --bonny-secondary: 118 75 162;
+    --bonny-accent: 255 107 107;
+    --bonny-success: 76 175 80;
+    --bonny-warning: 255 152 0;
+    --bonny-error: 244 67 54;
+    --bonny-background: 15 23 42;
+    --bonny-surface: 30 41 59;
+    --bonny-text: 248 250 252;
+    --bonny-text-secondary: 148 163 184;
 
-    --card: 215 28% 6%;
-    --card-foreground: 213 31% 91%;
-
-    --popover: 215 28% 8%;
-    --popover-foreground: 213 31% 91%;
-
-    /* AI Primary - Deep Neural Blue */
-    --primary: 217 91% 60%;
-    --primary-foreground: 215 28% 4%;
-    --primary-glow: 217 91% 70%;
-
-    /* Electric Secondary */
-    --secondary: 271 91% 65%;
-    --secondary-foreground: 215 28% 4%;
-
-    /* Neural Muted */
-    --muted: 215 28% 12%;
-    --muted-foreground: 213 20% 65%;
-
-    /* Neon Accent */
-    --accent: 158 64% 52%;
-    --accent-foreground: 215 28% 4%;
-
-    --destructive: 0 62% 50%;
-    --destructive-foreground: 213 31% 91%;
-
-    --border: 215 28% 18%;
-    --input: 215 28% 12%;
-    --ring: 217 91% 60%;
-
-    --radius: 0.75rem;
-
-    /* Neural Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-neural: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 50%, hsl(var(--accent)) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(215 28% 8%) 100%);
-    
-    /* AI Shadows */
-    --shadow-neural: 0 0 50px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.4);
-    --shadow-card: 0 10px 40px -10px hsl(var(--background) / 0.8);
-    
-    /* Animations */
-    --transition-neural: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
+    /* Keeping existing shadcn variables for compatibility */
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
+    --primary-foreground: 222.2 84% 4.9%;
+    --primary-glow: 167 181 255;
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+
+    /* BONNY Gradients */
+    --gradient-primary: linear-gradient(135deg, rgb(var(--bonny-primary)) 0%, rgb(var(--bonny-secondary)) 100%);
+    --gradient-neural: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-card: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+
+    /* BONNY Shadows */
+    --shadow-neural: 0 10px 30px rgba(102, 126, 234, 0.3);
+    --shadow-glow: 0 0 40px rgba(167, 181, 255, 0.4);
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-}
 
-@layer base {
   * {
-    @apply border-border;
+    @apply border-gray-700;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-slate-900 text-white;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .bonny-gradient {
+    background: linear-gradient(135deg, rgb(var(--bonny-primary)) 0%, rgb(var(--bonny-secondary)) 100%);
+  }
+
+  .bonny-card {
+    @apply bg-surface/50 backdrop-blur-lg border border-white/10 rounded-xl shadow-2xl;
+  }
+
+  .bonny-button {
+    @apply px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 active:scale-95;
+  }
+
+  .bonny-button-primary {
+    @apply bonny-button bonny-gradient text-white shadow-lg hover:shadow-xl;
+  }
+
+  .bonny-button-secondary {
+    @apply bonny-button bg-surface/50 border border-white/20 text-white hover:bg-surface/70;
+  }
+
+  .bonny-input {
+    @apply bg-surface/30 border border-white/20 rounded-lg px-4 py-3 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent;
+  }
+
+  .bonny-panel {
+    @apply bonny-card p-6;
+  }
+
+  .bonny-sidebar {
+    @apply bg-surface/80 backdrop-blur-xl border-r border-white/10;
+  }
+
+  .bonny-toolbar {
+    @apply bg-surface/90 backdrop-blur-xl border-b border-white/10;
+  }
+
+  .bonny-canvas {
+    @apply bg-gradient-to-br from-background to-surface/50 min-h-screen;
+  }
+
+  .bonny-component {
+    @apply relative cursor-pointer transition-all duration-300 hover:scale-105;
+  }
+
+  .bonny-component:hover::after {
+    content: '';
+    @apply absolute inset-0 border-2 border-primary/50 rounded-lg pointer-events-none;
+  }
+
+  .bonny-floating {
+    @apply animate-float;
+  }
+
+  .bonny-pulse {
+    @apply animate-pulse-neural;
+  }
+
+  .bonny-shimmer {
+    @apply relative overflow-hidden;
+  }
+
+  .bonny-shimmer::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent;
+    animation: shimmer 2s linear infinite;
   }
 }

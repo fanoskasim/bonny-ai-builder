@@ -19,6 +19,20 @@ export default {
 		},
 		extend: {
 			colors: {
+				// BONNY specific colors using rgb variables
+				bonny: {
+					primary: 'rgb(var(--bonny-primary))',
+					secondary: 'rgb(var(--bonny-secondary))',
+					accent: 'rgb(var(--bonny-accent))',
+					success: 'rgb(var(--bonny-success))',
+					warning: 'rgb(var(--bonny-warning))',
+					error: 'rgb(var(--bonny-error))',
+					background: 'rgb(var(--bonny-background))',
+					surface: 'rgb(var(--bonny-surface))',
+					text: 'rgb(var(--bonny-text))',
+					'text-secondary': 'rgb(var(--bonny-text-secondary))'
+				},
+				// Shadcn/ui colors (keeping for compatibility)
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -62,6 +76,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Additional semantic colors for surface levels
+				surface: {
+					DEFAULT: 'rgb(var(--bonny-surface))',
+					30: 'rgb(var(--bonny-surface) / 0.3)',
+					50: 'rgb(var(--bonny-surface) / 0.5)',
+					70: 'rgb(var(--bonny-surface) / 0.7)',
+					80: 'rgb(var(--bonny-surface) / 0.8)',
+					90: 'rgb(var(--bonny-surface) / 0.9)'
 				}
 			},
 			backgroundImage: {
